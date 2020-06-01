@@ -7,8 +7,20 @@ var MovieSchema = new mongoose.Schema({
     createdBy : {
         type : String,
         required : true
+    },
+    createdAt : {
+        type : String,
+        required : true
+    },
+    updatedBy : {
+        type : String,
+        required : false
+    },
+    updatedAt : {
+        type : String,
+        required : false
     }
-}, { versionKey: false });
+}, {versionKey: false});
 mongoose.model('Movie', MovieSchema);
 
 module.exports = mongoose.model('Movie');

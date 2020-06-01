@@ -7,7 +7,7 @@ global.__root   = __dirname + '/';
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use('/api', router);
 app.use(morgan('dev'));
+app.use('/api', router);
 
 module.exports = app;
